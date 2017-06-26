@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THK_demoFPS.Plugins", "THK_demoFPS.Plugins.csproj", "{49C1D4BB-D031-9103-0787-31B4984A1A74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THK_demoFPS", "THK_demoFPS.csproj", "{0BA2F19B-4F1D-2C5C-BEFA-3C9D99A0DB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THK_demoFPS.Editor.Plugins", "THK_demoFPS.Editor.Plugins.csproj", "{74462B70-EDA7-748C-F85F-4AF3FB17AD33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49C1D4BB-D031-9103-0787-31B4984A1A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C1D4BB-D031-9103-0787-31B4984A1A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C1D4BB-D031-9103-0787-31B4984A1A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C1D4BB-D031-9103-0787-31B4984A1A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA2F19B-4F1D-2C5C-BEFA-3C9D99A0DB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA2F19B-4F1D-2C5C-BEFA-3C9D99A0DB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA2F19B-4F1D-2C5C-BEFA-3C9D99A0DB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA2F19B-4F1D-2C5C-BEFA-3C9D99A0DB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74462B70-EDA7-748C-F85F-4AF3FB17AD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74462B70-EDA7-748C-F85F-4AF3FB17AD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74462B70-EDA7-748C-F85F-4AF3FB17AD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74462B70-EDA7-748C-F85F-4AF3FB17AD33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
