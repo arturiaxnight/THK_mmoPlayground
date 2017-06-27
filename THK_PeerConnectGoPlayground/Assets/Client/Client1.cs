@@ -1,19 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections;
 using System.Net.Sockets;
 using System.IO;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class Button : MonoBehaviour {
-
-	readonly string _ip = "127.0.0.1"; //自己對外IP
+public class Client1 : MonoBehaviour
+{
+    readonly string _ip = "127.0.0.1"; //自己對外IP
     readonly int _port = 7938; //連接port
-
-	public void OnPointerClick(PointerEventData eventData){
-		Debug.Log("Click");
-		Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
+    public string userName = "Username";
+    void OnGUI()
+    {
+        userName = GUI.TextField(new Rect(50, 50, 200, 200), userName, 20);
+        
+        if (GUI.Button(new Rect(10, 10, 100, 100), "Send Puiblic IP"))
+        {
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Connect(_ip, _port);
             NetworkStream stream = new NetworkStream(socket);
             StreamWriter sw = new StreamWriter(stream);
@@ -28,5 +29,7 @@ public class Button : MonoBehaviour {
             sw.Close();
             stream.Close();
             socket.Close();
-	}
+        }
+    }
+
 }
