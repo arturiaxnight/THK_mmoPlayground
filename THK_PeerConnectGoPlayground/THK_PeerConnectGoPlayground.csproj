@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Client\Client1.cs" />
+    <Compile Include="Assets\Client\CommunicateCS.cs" />
     <Compile Include="Assets\Client\server2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

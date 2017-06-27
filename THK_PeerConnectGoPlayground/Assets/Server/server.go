@@ -8,13 +8,13 @@ import (
 
 //CheckError 檢查錯誤
 func CheckError(err error) {
-	if err != nil{
+	if err != nil {
 		fmt.Println("Error: ", err)
 		os.Exit(0)
 	}
 }
 
-func main(){
+func main() {
 	ServerAddr, err := net.ResolveUDPAddr("udp", ":7938")
 	CheckError(err)
 	ServerConn, err := net.ListenUDP("udp", ServerAddr)
@@ -22,11 +22,19 @@ func main(){
 	defer ServerConn.Close()
 
 	buff := make([]byte, 1024)
-	for{
+	for {
 		n, addr, err := ServerConn.ReadFromUDP(buff)
+		if string(buff[0:n]) == "yolo" {
+			NewLinker(addr)
+		}
 		fmt.Println("收到 ", string(buff[0:n]), " 來自 ", addr)
-		if err != nil{
+		if err != nil {
 			fmt.Println("Error: ", err)
 		}
 	}
+}
+
+// NewLinker 新增使用者
+func NewLinker(NewClientIPAddress string) {
+
 }
