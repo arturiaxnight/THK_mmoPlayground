@@ -14,7 +14,7 @@ public class Client1 : MonoBehaviour
         
         if (GUI.Button(new Rect(10, 10, 100, 100), "Send Puiblic IP"))
         {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
             socket.Connect(_ip, _port);
             NetworkStream stream = new NetworkStream(socket);
             StreamWriter sw = new StreamWriter(stream);
